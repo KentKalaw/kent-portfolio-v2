@@ -99,7 +99,7 @@ const Projects = () => {
       title: "Simple AI Resume Builder",
       description:
         "A simple CohereAI-powered resume builder that helps users create professional resumes quickly.",
-      image: "/placeholder.svg",
+      image: "/ai-resume-builder.png",
       technologies: ["Next.JS", "TypeScript", "CohereAI", "Tailwind CSS"],
       liveUrl: "https://ai-resume-builder-pi-navy.vercel.app/",
       githubUrl: "https://github.com/KentKalaw/ai-resume-builder",
