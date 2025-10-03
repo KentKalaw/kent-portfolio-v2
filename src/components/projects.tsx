@@ -28,7 +28,7 @@ const ProjectCard = ({
         <Image
           src={image}
           alt={title}
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="object-contain transition-transform duration-300 group-hover:scale-105"
           fill
         />
       </div>
@@ -36,7 +36,7 @@ const ProjectCard = ({
       {/* Content */}
       <div className="flex-1 flex flex-col p-6">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-muted-foreground mb-4">{description}</p>
+        <p className="text-muted-foreground text-justify mb-4">{description}</p>
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-6">
@@ -109,13 +109,14 @@ const Projects = () => {
         "University of Batangas - Internal Quality Assurance Office (iQAO) Auditing System",
       description:
         "A comprehensive auditing system for the University of Batangas' Internal Quality Assurance Office.",
-      image: "/placeholder.svg",
+      image: "/iqao-login.png",
       technologies: [
         "Next.JS",
         "Prisma",
         "MySQL",
         "TypeScript",
         "Tailwind CSS",
+        "ShadCN/UI",
       ],
       liveUrl: "",
       githubUrl: "",
@@ -124,7 +125,7 @@ const Projects = () => {
       title: "Koyam's Recette - Recipe App for Filipino Dishes",
       description:
         "A feature-rich recipe mobile application for Filipino dishes, allowing users to browse, share, and create recipes. Includes user authentication, favorites, and search functionality.",
-      image: "/placeholder.svg",
+      image: "/koyam-recette.png",
       technologies: ["Dart", "Flutter", "Firebase", "Provider"],
       liveUrl: "https://chatapp-demo.com",
       githubUrl: "https://github.com/username/chat-app",
@@ -134,8 +135,8 @@ const Projects = () => {
         "Alumnite: Leveraging Responsive Web Development for Enhancing Alumni Engagement and Reinforcing University Core Values - Capstone",
       description:
         "A responsive web application designed to enhance alumni engagement and reinforce university core values. Features include event management, news updates, and networking opportunities.",
-      image: "/placeholder.svg",
-      technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "jQuery"],
+      image: "/alumnite.png",
+      technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
       liveUrl: "",
       githubUrl: "",
     },

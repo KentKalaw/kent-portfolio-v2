@@ -54,7 +54,7 @@ const ExperienceItem = ({
 const Experience = () => {
   const experiences = [
     {
-      title: "On The Job Training - Frontend Developer",
+      title: "On the Job Training - Frontend Developer",
       company: "University of Batangas - ICT Department",
       period: "January 2025 - May 2025",
       description:

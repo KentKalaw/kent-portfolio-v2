@@ -7,6 +7,7 @@ import { HTMLAttributes } from "react";
 import { GithubLogo } from "./icons";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Zap } from "lucide-react";
+import Link from "next/link";
 const About = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center px-3 pt-3">
@@ -48,9 +49,15 @@ const About = () => {
                   together!
                 </p>
                 <div className="flex flex-wrap gap-4 justify-start">
-                  <Button className="rounded-full">
-                    <GithubLogo />
-                    View My Github
+                  <Button className="rounded-full" asChild>
+                    <a
+                      href="https://github.com/KentKalaw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <GithubLogo />
+                      View My Github
+                    </a>
                   </Button>
                   <Button variant="outline" className="rounded-full">
                     <Download />
