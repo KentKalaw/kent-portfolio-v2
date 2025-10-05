@@ -84,7 +84,7 @@ const ProjectCard = ({
               disabled
             >
               <GithubLogo className="mr-1 h-4 w-4" />
-              View Code
+              Not available for viewing
             </Button>
           )}
         </div>
@@ -124,7 +124,7 @@ const Projects = () => {
     {
       title: "Koyam's Recette - Recipe App for Filipino Dishes",
       description:
-        "A feature-rich recipe mobile application for Filipino dishes, allowing users to browse, share, and create recipes. Includes user authentication, favorites, and search functionality.",
+        "A feature-rich recipe mobile application for Filipino dishes, allowing users to browse, share, and create recipes. Includes user authentication, favorites, and search functionality. Integrated admin panel for content management.",
       image: "/koyam-recette.png",
       technologies: ["Dart", "Flutter", "Firebase", "Provider"],
       liveUrl: "",

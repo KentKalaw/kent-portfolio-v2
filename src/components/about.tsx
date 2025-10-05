@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -7,8 +9,18 @@ import { HTMLAttributes } from "react";
 import { GithubLogo } from "./icons";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Zap } from "lucide-react";
-import Link from "next/link";
+import { useState } from "react";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { X } from "lucide-react";
+
 const About = () => {
+  const [showCVViewer, setShowCVViewer] = useState(false);
   return (
     <div className="relative min-h-screen flex items-center justify-center px-3 pt-3">
       <AnimatedGridPattern
@@ -59,9 +71,13 @@ const About = () => {
                       View My Github
                     </a>
                   </Button>
-                  <Button variant="outline" className="rounded-full">
+                  <Button
+                    variant="outline"
+                    className="rounded-full bg-transparent"
+                    onClick={() => setShowCVViewer(true)}
+                  >
                     <Download />
-                    Download CV
+                    View CV
                   </Button>
                 </div>
               </div>
@@ -69,6 +85,7 @@ const About = () => {
           </div>
         </section>
       </div>
+      <CVViewerDialog open={showCVViewer} onOpenChange={setShowCVViewer} />
     </div>
   );
 };
@@ -91,4 +108,65 @@ const ProfileImage = ({
     </div>
   </div>
 );
+
+interface CVViewerDialogProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}
+
+const CVViewerDialog = ({ open, onOpenChange }: CVViewerDialogProps) => {
+  const cvPath = "/Kent-Kalaw-Resume.pdf";
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = cvPath;
+    link.download = "Kent-Francis-Kalaw-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="max-w-[95vw] w-full h-[95vh] md:max-w-4xl md:h-[90vh] p-0 flex flex-col [&>button]:hidden">
+        <DialogHeader className="px-6 py-4 border-b border-border shrink-0">
+          <div className="flex items-center justify-between gap-4">
+            <DialogTitle className="text-sm md:text-lg font-semibold">
+              Kent Francis E. Kalaw - CV
+            </DialogTitle>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleDownload}
+                className="rounded-full bg-transparent"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download
+              </Button>
+              <DialogClose asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 rounded-full"
+                >
+                  <X className="h-4 w-4" />
+                  <span className="sr-only">Close</span>
+                </Button>
+              </DialogClose>
+            </div>
+          </div>
+        </DialogHeader>
+        <div className="flex-1 min-h-0 overflow-hidden">
+          <iframe
+            src={cvPath}
+            className="w-full h-full border-0"
+            title="CV Preview"
+          />
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
 export default About;

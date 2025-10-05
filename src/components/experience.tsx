@@ -58,7 +58,7 @@ const Experience = () => {
       company: "University of Batangas - ICT Department",
       period: "January 2025 - May 2025",
       description:
-        "Contributed to the development of the university's new website, enhancing user experience and implementing responsive design principles.",
+        "Contributed to the development of the university's new website, enhancing user experience and implementing responsive design principles. Learned best practices in web development and teamwork.",
       technologies: ["Next.JS", "Node.js", "TypeScript", "Prisma", "MySQL"],
     },
   ];
