@@ -62,7 +62,7 @@ const ProjectCard = ({
               className="rounded-full cursor-not-allowed"
               disabled
             >
-              Unavailable (Confidential)
+              Unavailable
             </Button>
           )}
 
@@ -127,8 +127,8 @@ const Projects = () => {
         "A feature-rich recipe mobile application for Filipino dishes, allowing users to browse, share, and create recipes. Includes user authentication, favorites, and search functionality.",
       image: "/koyam-recette.png",
       technologies: ["Dart", "Flutter", "Firebase", "Provider"],
-      liveUrl: "https://chatapp-demo.com",
-      githubUrl: "https://github.com/username/chat-app",
+      liveUrl: "",
+      githubUrl: "https://github.com/kentkalaw/koyam-final",
     },
     {
       title:
