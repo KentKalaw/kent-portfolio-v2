@@ -143,7 +143,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="relative py-20 px-6">
+    <section id="projects" className="relative py-20 px-6 hidden md:block">
       <div className="max-w-screen-md mx-auto">
         <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-4">
