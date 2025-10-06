@@ -3,7 +3,10 @@ import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 const Skills = () => {
   return (
-    <section className="bg-background pb-16 md:pb-32 overflow-hidden">
+    <section
+      id="skills"
+      className="relative py-20 px-6 md:pb-32 overflow-hidden scroll-mt-24"
+    >
       <div className="group relative m-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col items-center md:flex-row">
           {/* Left Label */}

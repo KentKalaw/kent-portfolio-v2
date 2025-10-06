@@ -39,7 +39,6 @@ const About = () => {
             <div className="flex flex-col md:flex-row-reverse gap-12">
               <ProfileImage className="hidden md:block" />
 
-              {/* Content */}
               <div className="flex-1 md:text-left mt-8">
                 <ProfileImage className="mt-3 mb-8 block md:hidden" />
                 <h2 className="text-4xl font-bold mb-2 tracking-tight">
