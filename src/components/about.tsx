@@ -21,6 +21,7 @@ import { X } from "lucide-react";
 
 const About = () => {
   const [showCVViewer, setShowCVViewer] = useState(false);
+
   return (
     <div className="relative min-h-screen flex items-center justify-center px-3 pt-3">
       <AnimatedGridPattern
