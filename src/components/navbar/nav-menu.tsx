@@ -32,7 +32,7 @@ export const NavMenu = ({ className, ...props }: NavigationMenuProps) => (
         </NavigationMenuLink>
       </NavigationMenuItem>
 
-      <NavigationMenuItem>
+      <NavigationMenuItem key="projects">
         <NavigationMenuLink asChild>
           <Link href="#projects">Projects</Link>
         </NavigationMenuLink>
