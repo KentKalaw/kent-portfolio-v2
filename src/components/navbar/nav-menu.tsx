@@ -31,9 +31,12 @@ export const NavMenu = ({ className, ...props }: NavigationMenuProps) => (
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink asChild>
-          <Link href="#projects" prefetch={false}>
-            Projects
-          </Link>
+          <Link href="#projects">Projects</Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavigationMenuLink asChild>
+          <Link href="#projects">Projects</Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
