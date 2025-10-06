@@ -15,31 +15,31 @@ export const NavMenu = ({ className, ...props }: NavigationMenuProps) => (
   >
     <NavigationMenuList className="gap-1 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start">
       <NavigationMenuItem>
-        <NavigationMenuLink asChild>
+        <NavigationMenuLink className="px-3 py-2 text-sm font-medium hover:text-primary transition-colors">
           <Link href="#about">About</Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
       <NavigationMenuItem>
-        <NavigationMenuLink asChild>
+        <NavigationMenuLink className="px-3 py-2 text-sm font-medium hover:text-primary transition-colors">
           <Link href="#skills">Skills</Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
       <NavigationMenuItem>
-        <NavigationMenuLink asChild>
+        <NavigationMenuLink className="px-3 py-2 text-sm font-medium hover:text-primary transition-colors">
           <Link href="#experience">Experience</Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
-      <NavigationMenuItem key="projects">
-        <NavigationMenuLink asChild>
+      <NavigationMenuItem>
+        <NavigationMenuLink className="px-3 py-2 text-sm font-medium hover:text-primary transition-colors">
           <Link href="#projects">Projects</Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
 
       <NavigationMenuItem>
-        <NavigationMenuLink asChild>
+        <NavigationMenuLink className="px-3 py-2 text-sm font-medium hover:text-primary transition-colors">
           <Link href="#contact">Contact Me</Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
